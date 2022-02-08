@@ -23,13 +23,25 @@
         background-color: #eee;
     }
 
+    .front_icon{
+        display: flex;
+        flex-direction: row;
+        
+    }
+
     .d-flex a{
         text-decoration: none;
         color: rgb(150, 150, 150);
+        margin: 10px;
+    }
+
+    .d-flex a:hover{
+        opacity: 0.8;
     }
 
     main{
         text-align: center;
+        
     }
 
     .head_block{
@@ -51,10 +63,12 @@
 
     .card{
         padding-top: 20px ;
+        margin: 0px auto;
     }
 
     .water_card{
         height: 100%;
+        
     }
 
     .card-body a{
@@ -80,7 +94,19 @@
 
     footer{
         background-color: #fff;
-        margin-top: 50px;
+        height: 80px;
+        margin-top: 60px;
+        display: flex;
+        align-items: center;
+    }
+
+    .footer_item{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 0px 0px 5%;
+
     }
 </style>
   </head>
@@ -89,7 +115,12 @@
       <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
+              
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
               <a class="navbar-brand" href="#">LOGO</a>
+
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -123,13 +154,13 @@
                   </li>
                 </ul>
                 <form class="d-flex">
-                    <ul>
-                        <li>
-                            <a href=""><i class="fas fa-user fa-lg"></i></a>
-                            <a href=""><i class="fas fa-shopping-cart fa-lg"></i></a>
-                            <a href=""><i class="fas fa-search fa-lg"></i></a>
-                        </li>
-                    </ul>
+                    <div class="front_icon">
+                        
+                            <div><a href=""><i class="fas fa-user fa-lg"></i></a></div>
+                            <div><a href=""><i class="fas fa-shopping-cart fa-lg"></i></a></div>
+                            <div><a href=""><i class="fas fa-search fa-lg"></i></a></div>
+                        
+                    </div>
     
                 </form>
               </div>
@@ -155,9 +186,9 @@
                         <div class="row gx-5 gy-5 water_card">
                             <div class="col-md-4">
                                 
-                                <div class="card">
+                                <div class="card" style="width: 20rem;">
                                     <div class="ratio ratio-16x9">
-                                        <img src="file:///Users/pomi/Downloads/前端/img/Cart/base.jpg" alt="">
+                                        <img src="img/base.jpg" alt="">
                                     </div>
                                     <div class="card-body">
                                         
@@ -170,9 +201,9 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="card">
+                                <div class="card" style="width: 20rem;">
                                     <div class="ratio ratio-16x9">
-                                        <img src="file:///Users/pomi/Downloads/前端/img/Cart/orange.jpg" alt="">
+                                        <img src="img/orange.jpg" alt="">
                                     </div>
                                     <div class="card-body">
                                         <h3 class="h5 card-title">柳橙水</h3>
@@ -184,9 +215,9 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="card">
+                                <div class="card" style="width: 20rem;">
                                     <div class="ratio ratio-16x9">
-                                        <img src="file:///Users/pomi/Downloads/前端/img/Cart/mint.jpg" alt="">
+                                        <img src="img/mint.jpg" alt="">
                                     </div>
                                     <div class="card-body">
                                         <h3 class="h5 card-title">薄荷水</h3>
@@ -198,9 +229,9 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="card">
+                                <div class="card" style="width: 20rem;">
                                     <div class="ratio ratio-16x9">
-                                        <img src="file:///Users/pomi/Downloads/前端/img/Cart/lemon.jpg" alt="">
+                                        <img src="img/lemon.jpg" alt="">
                                     </div>
                                     <div class="card-body">
                                         <h3 class="h5 card-title">檸檬水</h3>
@@ -212,9 +243,9 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="card">
+                                <div class="card" style="width: 20rem;">
                                     <div class="ratio ratio-16x9">
-                                        <img src="file:///Users/pomi/Downloads/前端/img/Cart/pinapple.jpg" alt="">
+                                        <img src="img/pinapple.jpg" alt="">
                                     </div>
                                     <div class="card-body">
                                         <h3 class="h5 card-title">鳳梨水</h3>
@@ -226,9 +257,9 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="card">
+                                <div class="card" style="width: 20rem;">
                                     <div class="ratio ratio-16x9">
-                                        <img src="file:///Users/pomi/Downloads/前端/img/Cart/passionfruit.jpg" alt="">
+                                        <img src="img/passionfruit.jpg" alt="">
                                     </div>
                                     <div class="card-body">
                                         <h3 class="h5 card-title">百香果水</h3>
@@ -253,8 +284,8 @@
       
 
       <footer>
-          <div>
-              <h1>footer</h1>
+          <div class="footer_item">
+              <p>© 2022 pomi</p>
           </div>
       </footer>
 

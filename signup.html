@@ -15,14 +15,14 @@
     <style>
 
         body{
-            background-color: #eee;
-            background-image: url(file:///Users/pomi/Downloads/前端/img/Cart/lake.jpg);
-            background-repeat: no-repeat;
-            background-size: 100%;
+          background-color: #eee;
+          background-image: url(img/lake.jpg);
+          background-repeat: no-repeat;
+          background-size: 100%;
         }
 
         main{
-            text-align: center;
+          text-align: center;
         }
 
         .head_block{
@@ -33,7 +33,7 @@
             padding: 5%;
             box-shadow: 3px 3px 5px 5px rgb(89, 105, 139);
             border-radius: 30px;
-            background-image: url(file:///Users/pomi/Downloads/前端/img/Cart/lake.jpg);
+            background-image: url(img/lake.jpg);
             background-size: cover;
             background-color: rgba(0, 0, 0, .2);
             background-blend-mode: multiply;
@@ -49,47 +49,13 @@
             margin-top: 6%;
             /* padding: 1%; */
         }
+
+        .keyup_p{
+            font-size: 14px;
+        }
     </style>
 
-    <script>
-        $(".username").keyup(
-        function check () {
-            var value = $(this).val();
-            // console.log(value.length);
-            if (value.length === 6) {
-            $(".username_p").text("帳號符合規範");
-            } else {
-            $(".username_p").text("請設定6位數帳號");
-            }
-        }
-        );
-
-        $(".pw").keyup(
-        function check () {
-            var value = $(".pw");
-        
-            var value1 = value[0].value;
-            var value2 = value[1].value;
-        
-            console.log(value1.length)
-            console.log(value2.length)
-            console.log(value2)
-        
-        
-        if (value1.length<8||value1.length>10) {
-            $(".pw1_p").text("請設定8-10位數密碼");
-            } else if(value1.length>=8&&value1.length<=10) {
-            $(".pw1_p").text("密碼符合規範");
-            } ;
-        if(value1===value2) {
-            $(".pw2_p").text("兩次密碼相同");
-        }
-        else{
-            $(".pw2_p").text("兩次密碼不一樣");  
-        };
-        }
-        );
-    </script>
+    
   </head>
 
 
@@ -156,11 +122,11 @@
                             <p>訂 購 人 全 名: <input type="name" name="name"  placeholder="輸入中文全名"></p>
                             <p>訂購人Ｅ-mail: <input type="e-mail" name="e-mail"  placeholder="輸入e-mail"></p>
                             <p>請 設 定 帳 號: <input class="username" type="username" name="username"  placeholder="輸入帳號"></p>
-                            <p class="username_p"></p>
+                            <p class="username_p keyup_p"></p>
                             <p>請 設 定 密 碼: <input class="pw" type="password" name="password" value="" placeholder="輸入密碼"></p>
-                            <p class="pw1_p"></p>
+                            <p class="pw1_p keyup_p"></p>
                             <p>再次輸入密碼: <input class="pw" type="password" name="password" value="" placeholder="再次輸入密碼"></p>
-                            <p class="pw2_p"></p>
+                            <p class="pw2_p keyup_p"></p>
                             <br>
                           <input type="submit" value="送出" >
                         </div>
@@ -176,6 +142,47 @@
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <script>
+      $(".username").keyup(
+      function check () {
+          var value = $(this).val();
+          // console.log(value.length);
+          if (value.length === 6) {
+          $(".username_p").text("帳號符合規範");
+          } else {
+          $(".username_p").text("請設定6位數帳號");
+          }
+      }
+      );
+
+      $(".pw").keyup(
+      function check () {
+          var value = $(".pw");
+      
+          var value1 = value[0].value;
+          var value2 = value[1].value;
+      
+          console.log(value1.length)
+          console.log(value2.length)
+          console.log(value2)
+      
+      
+      if (value1.length<8||value1.length>10) {
+          $(".pw1_p").text("請設定8-10位數密碼");
+          } else if(value1.length>=8&&value1.length<=10) {
+          $(".pw1_p").text("密碼符合規範");
+          } ;
+      if(value1===value2) {
+          $(".pw2_p").text("兩次密碼相同");
+      }
+      else{
+          $(".pw2_p").text("兩次密碼不一樣");  
+      };
+      }
+      );
+  </script>
+
   </body>
 
   <footer>
