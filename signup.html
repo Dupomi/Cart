@@ -12,32 +12,45 @@
     <!-- jQurey -->
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
     <style>
 
         body{
           background-color: #eee;
-          background-image: url(img/lake.jpg);
-          background-repeat: no-repeat;
-          background-size: 100%;
         }
 
         main{
           text-align: center;
         }
 
+        .navbar_icon{
+          display: flex;
+          flex-direction: row;
+        }
+
+        .d-flex a{
+        text-decoration: none;
+        color: rgb(150, 150, 150);
+        margin: 10px;
+        }
+
+        .d-flex a:hover{
+        opacity: 0.8;
+        }
+
         .head_block{
             margin-top: 10%;
             margin-bottom: 10%;
-            margin-left: 20%;
-            margin-right: 20%;
+            margin-left: 30%;
+            margin-right: 30%;
             padding: 5%;
-            box-shadow: 3px 3px 5px 5px rgb(89, 105, 139);
+            box-shadow: 3px 3px 5px 5px rgb(210, 210, 210);
+            background-color: #fff;
             border-radius: 30px;
-            background-image: url(img/lake.jpg);
-            background-size: cover;
-            background-color: rgba(0, 0, 0, .2);
             background-blend-mode: multiply;
-            color: #fff;
+            color: black;
             align-items: center;
             display: flex;
             flex-direction: column;
@@ -52,6 +65,7 @@
 
         .keyup_p{
             font-size: 14px;
+            color: rgb(150, 150, 150)
         }
     </style>
 
@@ -62,57 +76,62 @@
   <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">LOGO</a>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">LOGO</a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link disabled"></a>
+                    </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled"></a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link disabled"></a>
-                      </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">首頁</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">品牌故事</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">門市查詢</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      商品
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">本週新品</a></li>
-                      <li><a class="dropdown-item" href="#">人氣商品</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">商品一覽</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled"></a>
-                  </li>
-                </ul>
-                <form class="d-flex">
-                    <ul>
-                        <li>
-                            <a href=""><img src="" alt="">會員</a>
-                            <a href=""><img src="" alt="">購物車</a>
-                            <a href=""><img src="" alt="">放大鏡</a>
-                        </li>
-                    </ul>
-    
-                </form>
-              </div>
+                      <a class="nav-link disabled"></a>
+                    </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">首頁</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">品牌故事</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">門市查詢</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    商品
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">本週新品</a></li>
+                    <li><a class="dropdown-item" href="#">人氣商品</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">商品一覽</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled"></a>
+                </li>
+              </ul>
+              <form class="d-flex">
+                  <div class="navbar_icon">
+                      
+                          <div><a href=""><i class="fas fa-user fa-lg"></i></a></div>
+                          <div><a href=""><i class="fas fa-shopping-cart fa-lg"></i></a></div>
+                          <div><a href=""><i class="fas fa-search fa-lg"></i></a></div>
+                      
+                  </div>
+  
+              </form>
             </div>
-          </nav>
+          </div>
+        </nav>
     </header>
 
-    <div class="container">
+    <div class="comtainer">
         <div class="row">
             <main>
                 <article>
@@ -146,38 +165,32 @@
     <script>
       $(".username").keyup(
       function check () {
-          var value = $(this).val();
+          let value = $(this).val();
           // console.log(value.length);
           if (value.length === 6) {
-          $(".username_p").text("帳號符合規範");
+          $(".username_p").text(" 帳號符合規範");
           } else {
-          $(".username_p").text("請設定6位數帳號");
+          $(".username_p").text(" 請設定6位數帳號");
           }
       }
       );
 
       $(".pw").keyup(
       function check () {
-          var value = $(".pw");
-      
-          var value1 = value[0].value;
-          var value2 = value[1].value;
-      
-          console.log(value1.length)
-          console.log(value2.length)
-          console.log(value2)
-      
-      
+          let value = $(".pw");    
+          let value1 = value[0].value;
+          let value2 = value[1].value;
+         
       if (value1.length<8||value1.length>10) {
-          $(".pw1_p").text("請設定8-10位數密碼");
+          $(".pw1_p").text(" 請設定8-10位數密碼");
           } else if(value1.length>=8&&value1.length<=10) {
-          $(".pw1_p").text("密碼符合規範");
+          $(".pw1_p").text(" 密碼符合規範");
           } ;
       if(value1===value2) {
-          $(".pw2_p").text("兩次密碼相同");
+          $(".pw2_p").text(" 兩次密碼相同");
       }
       else{
-          $(".pw2_p").text("兩次密碼不一樣");  
+          $(".pw2_p").text(" 兩次密碼不一樣");  
       };
       }
       );
